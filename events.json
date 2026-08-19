@@ -2,33 +2,41 @@
   {
     "id": 1,
     "title": "Monthly Convenant Service",
-    "date": "2026-09-06T10:00:00+01:00",
-    "time": "09:00 AM",
+    "date": "2026-09-06T09:00:00+01:00",
+    "time": "9:00 AM",
     "location": "NTDC Worship Centre, 32 Adimula Street, Idimu",
     "description": "A special covenant service filled with heartfelt worship, thanksgiving, and powerful testimonies celebrating the grace and faithfulness of God."
   },
   {
     "id": 2,
     "title": "NTDC Annual Women's Day Celebration",
-    "date": "2026-09-13T10:00:00+01:00",
-    "time": "09:00 AM",
+    "date": "2026-09-13T09:00:00+01:00",
+    "time": "9:00 AM",
     "location": "NTDC Worship Centre, 32 Adimula Street, Idimu",
     "description": "A vibrant and empowering service honoring the Godly women of NTDC. Join us for inspiring worship, dynamic word ministration, special presentations, and fellowship."
   },
   {
   "id": 3,
   "title": "NTDC Annual Men's Day Celebration",
-  "date": "2026-09-20T10:00:00+01:00",
-  "time": "09:00 AM",
+  "date": "2026-09-20T09:00:00+01:00",
+  "time": "9:00 AM",
   "location": "NTDC Worship Centre, 32 Adimula Street, Idimu",
   "description": "A powerful gathering celebrating the Christian men of NTDC. Join us for transformational teaching, uplifting praise, and a charge on spiritual leadership and manhood."
 },
   {
-  "id": 4,
-  "title": "NTDC Youth Sunday & Anointing Service",
-  "date": "2026-09-27T10:00:00+01:00",
-  "time": "10:00 AM",
-  "location": "NTDC Worship Centre, 32 Adimula Street, Idimu",
-  "description": "An energetic, youth-led worship experience filled with vibrant praise, creative ministrations, and an empowering message tailored for the next generation."
-}
+    "id": 5,
+    "title": "Night of Encounter",
+    "date": "2026-09-25T22:00:00+01:00",
+    "time": "10:00 PM",
+    "location": "NTDC Worship Centre, 32 Adimula Street, Idimu",
+    "description": "Join us on the last Friday of the month for a powerful night of prayer and prophetic worship."
+  },
+  {
+    "id": 4,
+    "title": "NTDC Youth Sunday & Anointing Service",
+    "date": "2026-09-27T09:00:00+01:00",
+    "time": "9:00 AM",
+    "location": "NTDC Worship Centre, 32 Adimula Street, Idimu",
+    "description": "An energetic, youth-led worship experience filled with vibrant praise, creative ministrations, and an empowering message tailored for the next generation."
+  }
 ]
