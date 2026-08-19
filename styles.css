@@ -189,10 +189,12 @@ input:focus, select:focus, textarea:focus { border-color: var(--blue); box-shado
 .button-primary { color: var(--white); background: var(--blue); }
 .button-primary:hover { background: var(--navy); }
 .form-submit { margin-top: 4px; }
+.form-submit:disabled { cursor: wait; opacity: .7; }
 .form-success { display: flex; gap: 12px; align-items: flex-start; padding: 14px 15px; margin-top: 17px; background: #eff8f2; border-left: 3px solid #31875c; color: #236541; }
 .success-icon { display: grid; place-items: center; width: 22px; height: 22px; border-radius: 50%; color: var(--white); background: #31875c; font-size: .75rem; }
 .form-success p { display: flex; flex-direction: column; gap: 2px; margin: 0; font-size: .74rem; }
 .form-success p span { color: #528169; font-size: .68rem; font-weight: 400; }
+.form-error { padding: 14px 15px; margin: 17px 0 0; color: #8a2430; background: #fff1f2; border-left: 3px solid #c53b4d; font-size: .74rem; }
 
 /* Footer */
 .site-footer { color: #bdcad6; background: #06182c; }

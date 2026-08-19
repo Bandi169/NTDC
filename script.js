@@ -184,12 +184,37 @@
   function setupPrayerForm() {
     const form = $('#prayer-form');
     const success = $('#form-success');
-    if (!form || !success) return;
-    form.addEventListener('submit', (event) => {
+    const errorMessage = $('#form-error');
+    const submitButton = form?.querySelector('[type="submit"]');
+    if (!form || !success || !errorMessage || !submitButton) return;
+
+    form.addEventListener('submit', async (event) => {
       event.preventDefault();
-      success.hidden = false;
-      form.reset();
-      success.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      success.hidden = true;
+      errorMessage.hidden = true;
+      submitButton.disabled = true;
+      submitButton.setAttribute('aria-busy', 'true');
+
+      try {
+        const response = await fetch(form.action, {
+          method: form.method,
+          body: new FormData(form),
+          headers: { Accept: 'application/json' }
+        });
+
+        if (!response.ok) throw new Error('Formspree rejected the submission.');
+
+        form.reset();
+        success.hidden = false;
+        success.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      } catch (error) {
+        console.error(error);
+        errorMessage.hidden = false;
+        errorMessage.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      } finally {
+        submitButton.disabled = false;
+        submitButton.removeAttribute('aria-busy');
+      }
     });
   }
 

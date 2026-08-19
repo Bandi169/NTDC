@@ -206,7 +206,7 @@
           <div class="prayer-quote"><span aria-hidden="true">“</span><p>Call to me and I will answer you.</p><small>Jeremiah 33:3</small></div>
         </div>
         <div class="form-panel">
-          <form id="prayer-form">
+          <form id="prayer-form" action="https://formspree.io/f/xoeayneb" method="POST">
             <div class="form-heading"><span class="form-number">04</span><div><p class="section-label">Prayer request</p><h3>How can we stand with you?</h3></div></div>
             <div class="form-row">
               <label for="name">Name <span>*</span><input id="name" name="name" type="text" placeholder="Your full name" required></label>
@@ -232,6 +232,7 @@
               <span class="success-icon" aria-hidden="true">&#10003;</span>
               <p><strong>Thank you, your prayer request has been sent.</strong><span>Our NTDC pastoral care team will be praying with you.</span></p>
             </div>
+            <p class="form-error" id="form-error" role="alert" hidden>We could not send your request. Please check your connection and try again.</p>
           </form>
         </div>
       </div>
