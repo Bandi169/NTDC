@@ -268,3 +268,22 @@ input:focus, select:focus, textarea:focus { border-color: var(--blue); box-shado
   html { scroll-behavior: auto; }
   *, *::before, *::after { transition-duration: .01ms !important; animation-duration: .01ms !important; }
 }
+@media (max-width: 768px) {
+  /* Prevent logo from overlapping text */
+  .logo, img[src*="logo"] {
+    position: relative !important;
+    display: block;
+    margin: 0 auto 15px auto;
+    z-index: 1;
+  }
+
+  /* Ensure text container stays clear underneath */
+  .next-gathering-session, 
+  .gathering-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    clear: both;
+  }
+}
