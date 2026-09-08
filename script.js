@@ -218,6 +218,33 @@
     });
   }
 
+  async function fetchAnnouncements() {
+    try {
+      const response = await fetch('announcements.json');
+      if (!response.ok) throw new Error('Announcement data could not be loaded.');
+      const announcements = await response.json();
+      const activeAnnouncements = announcements.filter(ann => ann.active !== false);
+      const announcementsContainer = document.getElementById('announcements-container');
+      if (!announcementsContainer) return;
+
+      announcementsContainer.innerHTML = '';
+
+      if (!activeAnnouncements.length) {
+        announcementsContainer.innerHTML = '<p class="loading-state">There are no announcements posted yet. Please check back soon.</p>';
+        return;
+      }
+
+      activeAnnouncements.forEach(announcement => {
+        const card = document.createElement('div');
+        card.className = 'announcement-card';
+        card.innerHTML = `<h2 class="announcement-title">${announcement.title}</h2><time class="announcement-date" datetime="${announcement.date}">${new Date(announcement.date).toLocaleDateString('en-NG', { day: '2-digit', month: 'short', year: 'numeric' })}</time><span class="announcement-badge">${announcement.badge}</span><p class="announcement-message">${announcement.message}</p>`;
+        announcementsContainer.appendChild(card);
+      });
+    } catch (error) {
+      console.error(error);
+    }
+  }
+
   document.addEventListener('DOMContentLoaded', () => {
     const year = $('#current-year');
     if (year) year.textContent = new Date().getFullYear();
@@ -225,5 +252,6 @@
     setupPrayerForm();
     loadSermons();
     loadEvents();
+    fetchAnnouncements();
   });
 })();

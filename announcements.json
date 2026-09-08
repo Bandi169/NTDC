@@ -1,0 +1,46 @@
+[
+  {
+    "id": "ann-1",
+    "type": "cancellation",
+    "badge": "EVENT CANCELLED",
+    "title": "Night of Encounter",
+    "date": "2026-09-25",
+    "summary": "Our Friday Monthly Vigil service will be on a Pause for a while.",
+    "message": "Please be informed that our Friday Monthly Vigil Service will not hold at the church auditorium. Regular services resume this Sunday at 9:00 AM. Join us online for morning prayer charges.",
+    "active": false,
+    "urgent": true
+  },
+  {
+    "id": "ann-2",
+    "type": "change",
+    "badge": "PROGRAM CHANGE",
+    "title": "Adjustment to Tuesday Workers & Leadership Training Time",
+    "date": "2026-09-08",
+    "summary": "Tuesday Workers & Leadership meeting now starts at 5:30 PM instead of 5:00 PM.",
+    "message": "Kindly note that our weekly Tuesday Workers and Leadership Training time has been shifted from 5:00 PM to 5:30 PM. All ministers, workers, and leaders are expected to be seated on time.",
+    "active": false,
+    "urgent": false
+  },
+  {
+    "id": "ann-3",
+    "type": "special",
+    "badge": "SPECIAL PROGRAM",
+    "title": "Upcoming 3-Day Prophetic & Deliverance Crusade",
+    "date": "2026-09-05",
+    "summary": "Theme: 'Breaking Every Yoke' - Oct 15th to 17th. Guest ministers and special deliverance prayers.",
+    "message": "Get ready for a life-transforming 3-Day Prophetic Crusade themed 'Breaking Every Yoke'. Date: Oct 15th - 17th, 2026. Time: 5:00 PM daily. Invite friends, family, and loved ones to experience God's power!",
+    "active": false,
+    "urgent": false
+  },
+  {
+    "id": "ann-4",
+    "type": "cancellation",
+    "badge": "EVENT CANCELLED",
+    "title": "Night of Encounter",
+    "date": "2026-09-25T22:00:00+01:00",
+    "summary": "Our Friday Monthly Vigil service will be on a Pause for a while.",
+    "message": "Please be informed that our Friday Monthly Vigil Service will not hold at the church auditorium. Regular services resume this Sunday at 9:00 AM. Thank you.",
+    "active": true,
+    "urgent": true
+  }
+]

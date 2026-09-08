@@ -137,6 +137,51 @@ h1 em, .prayer-intro h2 em { color: var(--gold); font-family: var(--serif); font
 .sermon-category { display: block; margin-bottom: 8px; color: var(--blue); text-transform: uppercase; letter-spacing: .13em; font-size: .6rem; font-weight: 700; }
 .sermon-card h3 { min-height: 2.8em; margin-bottom: 14px; color: var(--navy); font-size: 1.05rem; line-height: 1.4; }
 .sermon-byline { display: flex; justify-content: space-between; gap: 10px; padding-top: 13px; border-top: 1px solid var(--line); color: var(--muted); font-size: .71rem; }
+
+/* Announcement Styles */
+.announcement-card {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  padding: 20px;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  transition: transform .2s, box-shadow .2s;
+}
+.announcement-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow);
+}
+.announcement-title {
+  margin: 0 0 8px 0;
+  color: var(--navy);
+  font-size: 1.25rem;
+  line-height: 1.3;
+}
+.announcement-date {
+  display: block;
+  margin: 0 0 12px 0;
+  color: var(--muted);
+  font-size: 0.875rem;
+}
+.announcement-badge {
+  display: inline-block;
+  padding: 4px 10px;
+  background: var(--gold);
+  color: var(--navy);
+  font-size: 0.75rem;
+  font-weight: 600;
+  border-radius: 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 12px;
+}
+.announcement-message {
+  margin: 0;
+  color: var(--ink);
+  line-height: 1.6;
+}
 .loading-state { grid-column: 1 / -1; color: var(--muted); font-size: .9rem; }
 
 /* Events */
@@ -269,4 +314,94 @@ input:focus, select:focus, textarea:focus { border-color: var(--blue); box-shado
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   *, *::before, *::after { transition-duration: .01ms !important; animation-duration: .01ms !important; }
+}
+/* Announcement Admin Modal Styles */
+.announcement-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: none;
+}
+
+.announcement-modal .modal-container {
+  max-width: 800px;
+  margin: 40px auto;
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.announcement-modal .modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.announcement-modal .modal-header h3 {
+  font-size: 24px;
+  margin: 0;
+}
+
+.announcement-modal .modal-header .modal-close {
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.announcement-modal .modal-body {
+  padding: 20px;
+}
+
+.announcement-modal .modal-body .announcement-form {
+  margin-bottom: 20px;
+}
+
+.announcement-modal .modal-body .announcement-form label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.announcement-modal .modal-body .announcement-form input[type="text"], .announcement-modal .modal-body .announcement-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+}
+
+.announcement-modal .modal-body .announcement-form textarea {
+  height: 100px;
+}
+
+.announcement-modal .modal-body .announcement-form .checkbox-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.announcement-modal .modal-body .announcement-form .checkbox-row label {
+  margin-right: 20px;
+}
+
+.announcement-modal .modal-body .modal-form-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.announcement-modal .modal-body .modal-form-actions button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background: #4CAF50;
+  color: #fff;
+  cursor: pointer;
+}
+
+.announcement-modal .modal-body .modal-form-actions button:hover {
+  background: #3e8e41;
 }
